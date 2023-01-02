@@ -30,7 +30,7 @@ This project is using an MIT license.
 Contact me at [jdettelback@gmail.com](mailto:jdettelback@gmail.com) if you have any questions.  You can see more of my work at <https://github.com/jdettelback>.
 
 
-  ![screenshot](https://raw.githubusercontent.com/jdettelback/teamprofile/master/Develop/images/teamprofilescreenshot.png)
+  ![screenshot](https://raw.githubusercontent.com/jdettelback/teamprofile/main/images/teamprofilescreenshot.png)
   
-  ![screenshot](https://raw.githubusercontent.com/jdettelback/teamprofile/master/Develop/images/teamprofilescreenshot2.png)
+  ![screenshot](https://raw.githubusercontent.com/jdettelback/teamprofile/main/images/teamprofilescreenshot2.png)
 
