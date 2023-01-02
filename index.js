@@ -1,4 +1,3 @@
-// TODO: Include packages needed for this application
 const Employee = require("./lib/Employee");
 const Engineer = require("./lib/Engineer");
 const Intern = require("./lib/Intern");
@@ -11,8 +10,6 @@ const fs = require("fs");
 const path = require("path");
 
 //const generateHTML = require("./generateHTML");
-
-// TODO: Create an array of questions for user input
 
 const questions = [
   {
@@ -34,15 +31,12 @@ function start() {
       response.office
     );
     team.push(employee1);
-    //console.log(employee1);
-    //console.log(team);
     init();
   });
 }
 
 function init() {
   inquirer.prompt(questions).then((response) => {
-    //console.log(response);
     if (response.position == "Engineer") {
       inquirer.prompt(Engineer.questions()).then((response) => {
         var employee1 = new Engineer(
@@ -69,7 +63,7 @@ function init() {
       });
     }
     if (response.position == "Finished") {
-      createRoster("./dist/roster.html", template(team));
+      createRoster("./dist/roster", template(team));
       return;
     }
   });
@@ -92,5 +86,4 @@ function writeFile(fileName, data) {
   return fs.writeFileSync(path.join(process.cwd(), fileName), data);
 }
 
-// Function call to initialize app
 start();
