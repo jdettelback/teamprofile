@@ -17,6 +17,9 @@ This tool uses command line prompts to generate an html document.  It requires n
 3. npm i inquirer@8.2.4 
 4. node index
 
+For testing:
+1. npm test
+
 ## Usage
 Start the program by typing "node index" into the terminal.  Then answer the prompts as directed.  The html will be generated once all the questions are answered and an html file named roster.html will be added to the dist folder.
 
