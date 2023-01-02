@@ -1,14 +1,16 @@
 const create_team_function = (team) => {
   const create_manager_html_function = (manager) => {
     return `
-        <div class="col mb-4">
-          <div class="card bg-primary h-100">
+        <div class="col m-4">
+          <div class="card bg-primary text-light h-100">
             <div class="card-body border-primary">
-              <h5 class="card-title ">${manager.getName()}</h5>
-              <h4>Manager</h4>
-              <ul class="list-group list-group-flush">
+              <p class="card-title h3 text-center">${manager.getName()}</p>
+              <p class="h4 text-center">Manager</p>
+              <ul class="list-group list-group-flush text-dark">
                 <li class="list-group-item">${manager.getId()}</li>
-                <li class="list-group-item">${manager.getEmail()}</li>
+                <li class="list-group-item">
+                <a href='mailto:${manager.getEmail()}'>${manager.getEmail()}</a>
+                </li>
                 <li class="list-group-item">${manager.getOffice()}</li>
               </ul>
             </div>
@@ -19,15 +21,19 @@ const create_team_function = (team) => {
 
   const create_engineer_html_function = (engineer) => {
     return `
-    <div class="col mb-4 h-100">
-          <div class="card bg-primary">
+    <div class="col m-4">
+          <div class="card bg-primary text-light h-100">
             <div class="card-body border-primary">
-              <h5 class="card-title ">${engineer.getName()}</h5>
-              <h4>Engineer</h4>
-              <ul class="list-group list-group-flush">
+              <p class="card-title h3 text-center">${engineer.getName()}</p>
+              <p class ="h4 text-center">Engineer</p>
+              <ul class="list-group list-group-flush text-dark">
                 <li class="list-group-item">${engineer.getId()}</li>
-                <li class="list-group-item">${engineer.getEmail()}</li>
-                <li class="list-group-item">${engineer.getGithub()}</li>
+                <li class="list-group-item">
+                <a href='mailto:${engineer.getEmail()}'>${engineer.getEmail()}</a>
+                </li>
+                <li class="list-group-item">
+                <a target="_blank" href='https://github.com/${engineer.getGithub()}'>${engineer.getGithub()}</a>
+                </li>
               </ul>
             </div>
           </div>
@@ -37,14 +43,16 @@ const create_team_function = (team) => {
 
   const create_intern_html_function = (intern) => {
     return `
-<div class="col mb-4 h-100">
-          <div class="card border-primary">
+    <div class="col m-4">
+          <div class="card border-primary h-100">
             <div class="card-body text-primary">
-              <h5 class="card-title ">${intern.getName()}</h5>
-              <h4>Intern</h4>
+              <p class="card-title h3 text-center">${intern.getName()}</p>
+              <p class="h4 text-center">Intern</p>
               <ul class="list-group list-group-flush">
                 <li class="list-group-item">${intern.getId()}</li>
-                <li class="list-group-item">${intern.getEmail()}</li>
+                <li class="list-group-item">
+                <a href='mailto:${intern.getEmail()}'>${intern.getEmail()}</a>
+                </li>
                 <li class="list-group-item">${intern.getSchool()}</li>
               </ul>
             </div>
@@ -101,12 +109,12 @@ module.exports = (team) => {
     <link rel="stylesheet" href="assets/css/style.css" />
     <title>Team Profile</title>
   </head>
-  <nav class="text-center m-3 p-4 bg-success">
+  <nav class="text-center m-3 p-3 bg-success">
     <h1>My Team Members</h1>
   </nav>
   <body>
     <main>
-      <div class="row row-cols-1 row-cols-md-3 row-cols-lg-4 g-4 justify-content-around m-3">
+      <div class="row row-cols-1 row-cols-md-3 row-cols-lg-4 g-4 justify-content-around m-4">
 
         ${create_team_function(team)}
 
